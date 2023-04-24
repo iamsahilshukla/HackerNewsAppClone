@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hacker News</title>
+  <link rel="icon" href="https://news.ycombinator.com/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+      background-color: #FFF;
+    }
+
+    #navbar {
+      background-color: #FF6600;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #navbar a {
+      color: #FFF;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+
+    #navbar a:hover {
+      text-decoration: underline;
+    }
+
+    #navbar a.active {
+      font-weight: bold;
+    }
+
+    #news-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #FF6600;
+    }
+
+    .news-item {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-top: 1px solid #DDD;
+    }
+
+    .news-item h2 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      color: #000;
+    }
+
+    .news-item .meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .news-item .meta span {
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: #FF6600;
+      padding: 10px;
+      color: #FFF;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px;
+    }
+
+    #searchForm {
+      padding: 5px;
+      color: white;
+    }
+
+    #footer-navbar a{
+      text-decoration: none;
+    }
+
+    #footer-navbar a:hover{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <a href="index.html" class="active">Hacker News</a>
+    <a href="newStories.html">new</a>
+    <a href="#">past</a>
+    <a href="#">comments</a>
+  </div>
+  <div id="news-container">
+    <h1>Hacker News</h1>
+    <div id="news-list"></div>
+  </div>
+  <footer>
+    Applications are open for YC Summer 2023
+    <br>
+    <div id ="footer-navbar">
+      <a href="#"> Guidelines</a>
+      <a href="#"> FAQ</a>
+      <a href="#">Lists</a>
+      <a href="#">API</a>
+      <a href="#">Security</a>
+      <a href="#">Legal </a>
+      <a href="#"> Apply to YC</a>
+      <a href="#">Contact</a>
+    </div>
+    <div id="searchForm">
+      <form class="example" action="newStories.html">
+        Search:<input type="text" placeholder="" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="pagination">
+        <a href="#" onclick="loadPage(currentPage - 1)">Previous</a>
+        <span>Page {{ currentPage }}</span>
+        <a href="#" onclick="loadPage(currentPage + 1)">Next</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
