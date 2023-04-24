@@ -1,6 +1,4 @@
 const baseUrl = "https://hacker-news.firebaseio.com/v0";
-const topStoriesUrl = `${baseUrl}/topstories.json`;
-const bestStoriesUrl = `${baseUrl}/beststories.json`;
 const newStoriesUrl = `${baseUrl}/newstories.json`;
 const batchSize = 10;
 let loadedItemsCount = 0;
@@ -62,12 +60,12 @@ window.addEventListener("scroll", () => {
     console.log(scrollTop,clientHeight,scrollHeight,isLoading)
     if (scrollTop + clientHeight >= scrollHeight - 5 && isLoading) {
         if (newsContainer.children.length === 0) {
-            loadNewsItems(topStories, 0);
+            loadNewsItems(newStories, 0);
         } else {
             const lastItemIndex = newsContainer.children.length;
             if (!isNaN(lastItemIndex)) {
                 const nextIndex = lastItemIndex + 1;
-                loadNewsItems(topStories, nextIndex);
+                loadNewsItems(newStories, nextIndex);
             }
         }
     }
@@ -76,25 +74,11 @@ window.addEventListener("scroll", () => {
     }
 });
 
-let topStories = [];
-let bestStories = [];
 let newStories = [];
-
-fetch(topStoriesUrl)
-    .then((response) => response.json())
-    .then((stories) => {
-        topStories = stories;
-        loadNewsItems(topStories, 0);
-    });
-
-fetch(bestStoriesUrl)
-    .then((response) => response.json())
-    .then((stories) => {
-        bestStories = stories;
-    });
 
 fetch(newStoriesUrl)
     .then((response) => response.json())
     .then((stories) => {
         newStories = stories;
+        loadNewsItems(newStories, 0);
     });

@@ -86,3 +86,21 @@
     #footer-navbar a:hover {
         text-decoration: underline;
     }
+
+    #news-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .news-item {
+        background-color: #f7f7f7;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .news-item a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+    }
