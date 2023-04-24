@@ -3,7 +3,7 @@ const topStoriesUrl = `${baseUrl}/topstories.json`;
 const bestStoriesUrl = `${baseUrl}/beststories.json`;
 const newStoriesUrl = `${baseUrl}/newstories.json`;
 const batchSize = 10;
-let loadedItemsCount = 0;
+let loadedItemsCount = 1;
 let isLoading = false;
 
 const renderNewsItem = (story) => {
@@ -11,7 +11,7 @@ const renderNewsItem = (story) => {
     newsElement.className = "news-item";
     const newsLink = document.createElement("a");
     newsLink.href = story.url;
-    newsLink.textContent = story.title;
+    newsLink.textContent = loadedItemsCount + '. ' + story.title;
     newsElement.appendChild(newsLink);
     return newsElement;
 };
@@ -27,7 +27,7 @@ const addNewsItem = (() => {
             newsContainer.appendChild(newsElement);
         }
         else {
-            console.log("injin");
+            console.error("ERR001-news-already-present");
         }
     }
 })();
@@ -36,18 +36,17 @@ const loadNewsItems = (stories, startIndex) => {
     console.log("sahil")
     isLoading = true;
     for (let i = startIndex; i < startIndex + batchSize; i++) {
-        if (i >= stories.length) {
-            console.log("sahil")
+        if (i >= 50) {
+            isLoading=false;
             break;
         }
         fetch(`${baseUrl}/item/${stories[i]}.json`)
             .then((response) => response.json())
             .then((story) => {
-                console.log("sahil")
                 addNewsItem(story);
                 loadedItemsCount++;
                 console.log(loadedItemsCount,stories.length)
-                if (loadedItemsCount === 50) {       // stories.length is 500 , i.e i make default 50
+                if (loadedItemsCount >=50) {       // stories.length is 500 , i.e i make default 50
                     isLoading = false;
                 }
             })
