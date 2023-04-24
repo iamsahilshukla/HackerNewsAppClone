@@ -1,0 +1,54 @@
+[
+    {
+        "heading" : "An introduction to lockless algorithms (2021) (lwn.net)",
+        "url"     : "https://lwn.net/Articles/844224/"
+    },
+    {
+        "heading" : "Scaling Transformer to 1M tokens and beyond with RMT (arxiv.org)",
+        "url"     : "https://arxiv.org/abs/2304.11062"
+    },
+    {
+        "heading" : "Inferno-OS: distributed operating system where everything is a file (github.com/inferno-os)",
+        "url"     : "https://github.com/inferno-os/inferno-os"
+    },
+    {
+        "heading" : "West Coast Trail The 75km/48 mile hike in Vancouver Island (dquach.com)",
+        "url"     : "https://www.dquach.com/2021/08/01/west-coast-trail-the-75km-48-mile-death-hike/"
+    },
+    {
+        "heading" : "Moths are more efficient pollinators than bees: new research (phys.org)",
+        "url"     : "https://phys.org/news/2023-03-moths-efficient-pollinators-bees.html"
+    },
+    {
+        "heading" : "Squawk bots: Can generative AI lead us to understanding animals? (cloud.google.com)",
+        "url"     : "https://cloud.google.com/blog/transform/can-generative-ai-help-humans-understand-animals-earth-species-project-conservation"
+    },
+    {
+        "heading" : "YouTube, the jewel of the internet (ft.com)",
+        "url"     : "https://www.ft.com/content/c57e3503-6fc0-44dc-9d50-35f8f9da25d2"
+    },
+    {
+        "heading" : "RISC on a Chip: David Patterson and Berkeley RISC-I (thechipletter.substack.com)",
+        "url"     : "https://thechipletter.substack.com/p/risc-on-a-chip-david-patterson-and"
+    },
+    {
+        "heading" : "Programming on Unix and automatic memory management (utoronto.ca)",
+        "url"     : "https://utcc.utoronto.ca/~cks/space/blog/unix/UnixAndAutomaticMemoryManagement"
+    },
+    {
+        "heading" : "First space images captured by balloon-borne telescope (utoronto.ca)",
+        "url"     : "https://www.utoronto.ca/news/first-space-images-captured-balloon-borne-telescope"
+    },
+    {
+        "heading" : "That won't scale: Present cost vs. future value (codesolo.substack.com)",
+        "url"     : "https://codesolo.substack.com/p/that-wont-scale-or-present-cost-vs"
+    },
+    {
+        "heading" : "Gamers 50-Plus Are a Growing Force in the Tech Market (aarp.org)",
+        "url"     : "https://www.aarp.org/research/topics/technology/info-2023/2023-gamers-50-plus.html"
+    },
+    {
+        "heading" : "Mathematician uncovers way to shrink sampling errors in large-dimensional data (phys.org)",
+        "url"     : "https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html"
+    }
+]
