@@ -24,9 +24,13 @@
         text-decoration: overline;
     }
 
-    #navbar a.active {
+    #navbar a:active {
         font-weight: bold;
-        }
+    }
+
+    #navbar a:visited {
+        font-weight: bold;
+    }
 
     #news-container {
         max-width: 800px;
