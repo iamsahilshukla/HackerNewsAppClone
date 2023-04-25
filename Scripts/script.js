@@ -75,9 +75,9 @@ window.addEventListener("scroll", () => {
     }
 });
 
-let topStories = [];
-let bestStories = [];
-let newStories = [];
+let topStories = [];  // currently topstories is storing
+// let bestStories = [];
+// let newStories = [];
 
 fetch(topStoriesUrl)
     .then((response) => response.json())
@@ -86,14 +86,14 @@ fetch(topStoriesUrl)
         loadNewsItems(topStories, 0);
     });
 
-fetch(bestStoriesUrl)
-    .then((response) => response.json())
-    .then((stories) => {
-        bestStories = stories;
-    });
+// fetch(bestStoriesUrl)            // we can use it one section where all news can be seen this for that case
+//     .then((response) => response.json())
+//     .then((stories) => {
+//         bestStories = stories;
+//     });
 
-fetch(newStoriesUrl)
-    .then((response) => response.json())
-    .then((stories) => {
-        newStories = stories;
-    });
+// fetch(newStoriesUrl)
+//     .then((response) => response.json())
+//     .then((stories) => {
+//         newStories = stories;
+//     });
